@@ -9,6 +9,7 @@ jobs:
     permissions: { contents: write }
     with:
       SONATYPE_PROFILE_NAME: 'com.madgag'
+      SONATYPE_CREDENTIAL_HOST: 's01.oss.sonatype.org'
       SONATYPE_USERNAME: 'roberto'
     secrets:
       SONATYPE_PASSWORD: ${{ secrets.AUTOMATED_MAVEN_RELEASE_SONATYPE_PASSWORD }}
