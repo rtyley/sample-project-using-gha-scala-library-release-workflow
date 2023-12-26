@@ -1,0 +1,15 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    uses: guardian/gha-scala-library-release-workflow/.github/workflows/reusable-release.yml@main
+    permissions: { contents: write }
+    with:
+      SONATYPE_PROFILE_NAME: 'com.madgag'
+      SONATYPE_USERNAME: 'roberto'
+    secrets:
+      SONATYPE_PASSWORD: ${{ secrets.AUTOMATED_MAVEN_RELEASE_SONATYPE_PASSWORD }}
+      PGP_PRIVATE_KEY: ${{ secrets.AUTOMATED_MAVEN_RELEASE_PGP_SECRET }}
