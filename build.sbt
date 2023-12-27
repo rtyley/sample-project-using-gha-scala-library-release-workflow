@@ -5,7 +5,7 @@ ThisBuild / scalaVersion := "2.13.12"
 ThisBuild / crossScalaVersions := Seq(
   scalaVersion.value,
   "3.3.1",
-  "2.12.18" // Motivated by facia/FAPI clients still on Scala 2.12
+  "2.12.18"
 )
 ThisBuild / scalacOptions := Seq("-deprecation", "-release:11")
 
