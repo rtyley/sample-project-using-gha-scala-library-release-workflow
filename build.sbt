@@ -19,9 +19,19 @@ lazy val baseSettings = Seq(
     Tests.Argument(TestFrameworks.ScalaTest, "-u", s"test-results/scala-${scalaVersion.value}", "-o")
 )
 
-lazy val core = project.settings(baseSettings)
+lazy val core =
+  project.settings(baseSettings,
+    libraryDependencies ++= Seq(
+      "com.github.blemale" %% "scaffeine" % "5.2.1"
+    )
+  )
 
-lazy val extra = project.dependsOn(core).settings(baseSettings)
+lazy val extra =
+  project.dependsOn(core).settings(baseSettings,
+    libraryDependencies ++= Seq(
+      "com.github.blemale" %% "scaffeine" % "5.2.1"
+    )
+  )
 
 lazy val `sample-gslrw-root` = (project in file("."))
   .aggregate(
