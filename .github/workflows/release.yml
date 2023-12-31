@@ -4,16 +4,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  debug-mima:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-          distribution: corretto
-          java-version: 17
-      - name: Debug Mima - why does it see etag-caching classes?!?
-        run: sbt "show core / versionPolicyFindMimaIssues"
   release:
     uses: guardian/gha-scala-library-release-workflow/.github/workflows/reusable-release.yml@main
     permissions: { contents: write }
