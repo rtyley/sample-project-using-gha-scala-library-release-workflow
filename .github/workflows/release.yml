@@ -6,7 +6,7 @@ on:
 jobs:
   release:
     uses: guardian/gha-scala-library-release-workflow/.github/workflows/reusable-release.yml@experimental
-    permissions: { contents: write }
+    permissions: { contents: write, pull-requests: write }
     with:
       SONATYPE_PROFILE_NAME: 'com.madgag'
       SONATYPE_CREDENTIAL_HOST: 's01.oss.sonatype.org'
