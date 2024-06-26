@@ -1,11 +1,11 @@
 import ReleaseTransformations.*
 import sbtversionpolicy.withsbtrelease.ReleaseVersion
 
-ThisBuild / scalaVersion := "2.13.12"
+ThisBuild / scalaVersion := "2.13.14"
 ThisBuild / crossScalaVersions := Seq(
   scalaVersion.value,
-  "3.3.1",
-  "2.12.18"
+  "3.3.3",
+  "2.12.19"
 )
 ThisBuild / scalacOptions := Seq("-deprecation", "-release:11")
 
