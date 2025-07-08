@@ -9,7 +9,6 @@ jobs:
     permissions: { contents: write, pull-requests: write }
     with:
       GITHUB_APP_ID: 930725
-      SONATYPE_PROFILE_NAME: 'com.madgag'
     secrets:
       SONATYPE_TOKEN: ${{ secrets.AUTOMATED_MAVEN_RELEASE_SONATYPE_TOKEN }}
       PGP_PRIVATE_KEY: ${{ secrets.AUTOMATED_MAVEN_RELEASE_PGP_SECRET }}
